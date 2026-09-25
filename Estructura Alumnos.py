@@ -151,7 +151,7 @@ if __name__ == "__main__":
             print(f" BÚSQUEDA PUNTUAL: ALUMNO 321 | MATERIA 5 ({MATERIAS[4]})")
             print("=" * 50)
             print(f" • Calificación obtenida : {nota}")
-            print(f"⏱️ TIEMPO DE ACCESO       : {tiempo:.6f} ms")
+            print(f" TIEMPO DE ACCESO       : {tiempo:.6f} ms")
             print("=" * 50)
 
         else:
