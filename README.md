@@ -1,2 +1,1 @@
-# Arreglos
-Esstructura de datos 
+Pues una de las cosas que aprendí fue que si se saturan de datos empieza a tener problemas de compilación, entonces lo más probable es que pues se deba a que el visual tiene una cierta limitación, pero igual grandes datos se le hace complicado a la visual poder hacerlos visibles en su tabla, entonces ahí también influyen los problemas para compilar y que se muestre en la terminal,  pero también depende de cuantos datos soporte, pero eso ya depende de cada dispositivo.
