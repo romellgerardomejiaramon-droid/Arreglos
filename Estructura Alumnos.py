@@ -1,7 +1,6 @@
 import random
 import time
 
-# Lista con las 6 materias básicas
 MATERIAS = ["Matemáticas", "Español", "Historia", "Geografía", "Biología", "Física"]
 
 def generar_matriz(total_alumnos, total_materias):
@@ -23,13 +22,12 @@ def mostrar_tabla_completa(matriz):
     print("\n" + "=" * ancho)
     print("           REGISTRO COMPLETO DE CALIFICACIONES (100,000 ALUMNOS)")
     print("=" * ancho)
-
+    
     encabezado = f"{'Alumno':<12} | " + " | ".join([f"{m[:8]:^9}" for m in MATERIAS])
     print(encabezado)
     print("-" * ancho)
 
     inicio = time.perf_counter()
-    # Recorre e imprime a TODOS los 100,000 alumnos
     for idx, fila in enumerate(matriz, start=1):
         calificaciones = " | ".join([f"{nota:^9}" for nota in fila])
         print(f"Alumno {idx:<7} | {calificaciones}")
@@ -60,7 +58,7 @@ def buscar_por_alumno(matriz, num_alumno):
 
 def buscar_por_materia(matriz, num_materia):
     """Muestra la calificación de los 100,000 alumnos en una materia y el tiempo."""
-    idx_materia = num_materia - 1  # Ajuste de base 0
+    idx_materia = num_materia - 1 
     nombre_materia = MATERIAS[idx_materia]
 
     inicio = time.perf_counter()
@@ -76,18 +74,12 @@ def buscar_por_materia(matriz, num_materia):
     print("─" * 50)
     print(f"⏱️ TIEMPO DE BÚSQUEDA (100,000 ALUMNOS): {tiempo:.6f} ms")
     print("=" * 50)
-
-# -------------------------------------------------------------
-# PROGRAMA PRINCIPAL CON CICLO CONTINUO
-# -------------------------------------------------------------
+    
 if __name__ == "__main__":
     TOTAL_ALUMNOS = 100000
     TOTAL_MATERIAS = 6
-
-    # 1. Generar la matriz
+    
     matriz = generar_matriz(TOTAL_ALUMNOS, TOTAL_MATERIAS)
-
-    # 2. Ciclo principal
     ejecutando = True
     while ejecutando:
         print("\n" + "═" * 55)
